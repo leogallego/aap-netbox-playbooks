@@ -6,7 +6,7 @@
     ssl_verify: True
   tasks:
     - name: Gather Cisco IOS facts
-      when: "ansible_network_os == 'ios'"
+      when: "ansible_network_os == 'cisco.ios.ios'"
       cisco.ios.ios_facts:
         gather_subset: "min"
 
