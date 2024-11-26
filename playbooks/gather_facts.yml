@@ -11,7 +11,7 @@
         gather_subset: "min"
 
     - name: Gather Arista EOS facts
-      when: "ansible_network_os == 'eos'"
+      when: "ansible_network_os == 'arista.eos.eos'"
       arista.eos.eos_facts:
         gather_subset: "config"
         gather_network_resources: "{{ network_resource | default('!bgp_global,!bgp_address_family') }}"
